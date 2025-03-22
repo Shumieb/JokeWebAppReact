@@ -1,6 +1,12 @@
 import React from 'react'
+import { BsFillHandThumbsUpFill } from "react-icons/bs"
 
-function JokeCard({ currentJoke, showPunchline, handleDisplayPunchline, handleDisplayNextJoke }) {
+function JokeCard({ currentJoke, showPunchline, handleDisplayPunchline, handleDisplayNextJoke, addLikedJoke }) {
+
+    const handleLikedJoke = () => {
+        addLikedJoke(currentJoke);
+    }
+
     return (
         <section className='card bg-primary text-white mb-5 pt-1 pb-3'>
             <div className='card-body text-start'>
@@ -36,8 +42,12 @@ function JokeCard({ currentJoke, showPunchline, handleDisplayPunchline, handleDi
                             >
                                 Next Joke
                             </button>
-                            <button className='btn btn-light text-primary-emphasis me-2 fs-5'>
-                                Like
+                            <button
+                                className='btn btn-light text-primary-emphasis me-2 fs-5 d-flex justify-content-between align-items-center'
+                                onClick={handleLikedJoke}
+                            >
+                                <span className='d-block mx-1'>Like</span>
+                                <span className='d-block mx-1 pb-1'><BsFillHandThumbsUpFill /></span>
                             </button>
                         </div>
                     </div>)

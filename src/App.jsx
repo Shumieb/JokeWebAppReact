@@ -4,8 +4,16 @@ import Layout from './components/Layout/layout';
 import AboutPage from './pages/aboutPage/aboutPage';
 import HomePage from './pages/homepage/homepage';
 import FavJokesPage from './pages/favJokesPage/favJokesPage';
+import { useState } from 'react';
 
 function App() {
+
+  const [likedJokes, setLikedJokes] = useState([]);
+
+  const addLikedJoke = (newJoke) => {
+    setLikedJokes([newJoke, ...likedJokes])
+    //console.log(newJoke);
+  }
 
   const router = createBrowserRouter([
     {
@@ -14,11 +22,11 @@ function App() {
       children: [
         {
           path: "/",
-          element: <HomePage />
+          element: <HomePage addLikedJoke={addLikedJoke} />
         },
         {
           path: "/favorite-jokes",
-          element: <FavJokesPage />
+          element: <FavJokesPage likedJokes={likedJokes} />
         },
         {
           path: "/about",

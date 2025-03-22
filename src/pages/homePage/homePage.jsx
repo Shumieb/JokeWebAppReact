@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import JokeCard from '../../components/JokeCard/jokeCard';
 
-function HomePage() {
+function HomePage({ addLikedJoke }) {
 
     const [showPunchline, setShowPunchline] = useState(false);
-    const [currentJoke, setCurrentJoke] = useState({})
+    const [currentJoke, setCurrentJoke] = useState({});
 
     useEffect(() => {
         getRandomJoke();
@@ -20,8 +20,9 @@ function HomePage() {
 
             const json = await response.json();
             if (json) {
-                setCurrentJoke({ "type": json.type, "punchline": json.punchline, "setup": json.setup });
+                setCurrentJoke({ "id": json.id, "type": json.type, "punchline": json.punchline, "setup": json.setup });
             }
+            console.log(json);
 
         } catch (e) {
             console.log(e);
@@ -45,6 +46,7 @@ function HomePage() {
                 showPunchline={showPunchline}
                 handleDisplayPunchline={handleDisplayPunchline}
                 handleDisplayNextJoke={handleDisplayNextJoke}
+                addLikedJoke={addLikedJoke}
             />
         </main>
     )
