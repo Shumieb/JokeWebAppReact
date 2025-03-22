@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/Layout/layout';
 import AboutPage from './pages/aboutPage/aboutPage';
 import HomePage from './pages/homepage/homepage';
+import FavJokesPage from './pages/favJokesPage/favJokesPage';
 
 function App() {
 
@@ -14,6 +15,10 @@ function App() {
         {
           path: "/",
           element: <HomePage />
+        },
+        {
+          path: "/favorite-jokes",
+          element: <FavJokesPage />
         },
         {
           path: "/about",

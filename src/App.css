@@ -2,3 +2,11 @@
   margin: 0;
   padding: 0;
 }
+
+.custom-w-80 {
+  width: 80%;
+}
+
+a {
+  text-decoration: none;
+}

@@ -2,7 +2,9 @@ import React from 'react'
 
 function HomePage() {
     return (
-        <div>homepage</div>
+        <main className='container text-center'>
+            homepage
+        </main>
     )
 }
 
