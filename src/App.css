@@ -3,8 +3,12 @@
   padding: 0;
 }
 
-.custom-w-80 {
-  width: 80%;
+.custom-w-60 {
+  width: 60%;
+}
+
+.custom-vh-75 {
+  min-height: 75vh;
 }
 
 a {

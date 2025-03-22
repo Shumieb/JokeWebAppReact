@@ -1,6 +1,6 @@
 # Joke Web App
 
-## App built using React, React Router, Bootstrap, CSS
+## App built using React, React Router, Bootstrap, CSS, React Icons
 
 ## Key Feature
 
