@@ -2,7 +2,9 @@ import React from 'react'
 
 function FavJokesPage() {
     return (
-        <div>favJokesPage</div>
+        <main className='container text-center'>
+            favourite jokes
+        </main>
     )
 }
 
