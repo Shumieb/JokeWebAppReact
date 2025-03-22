@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, memo } from 'react'
 import JokeCard from '../../components/JokeCard/jokeCard';
+import LandingPage from '../../components/LandingPage/landingPage';
 
 function HomePage({ addLikedJoke }) {
 
     const [showPunchline, setShowPunchline] = useState(false);
     const [currentJoke, setCurrentJoke] = useState({});
+    const [getNewJoke, setGetNewJoke] = useState(false);
 
     useEffect(() => {
-        getRandomJoke();
+        if (getNewJoke) {
+            getRandomJoke();
+        }
     }, []);
 
     const getRandomJoke = async () => {
@@ -21,8 +25,10 @@ function HomePage({ addLikedJoke }) {
             const json = await response.json();
             if (json) {
                 setCurrentJoke({ "id": json.id, "type": json.type, "punchline": json.punchline, "setup": json.setup });
+                setGetNewJoke(false);
             }
             console.log(json);
+
 
         } catch (e) {
             console.log(e);
@@ -40,16 +46,23 @@ function HomePage({ addLikedJoke }) {
 
     return (
         <main className='container text-center custom-vh-75'>
-            <p className='fs-3 text-primary-emphasis mb-4'>Joke App</p>
-            <JokeCard
-                currentJoke={currentJoke}
-                showPunchline={showPunchline}
-                handleDisplayPunchline={handleDisplayPunchline}
-                handleDisplayNextJoke={handleDisplayNextJoke}
-                addLikedJoke={addLikedJoke}
-            />
-        </main>
+            {
+                Object.keys(currentJoke).length === 0 ? <LandingPage getRandomJoke={getRandomJoke} /> :
+                    (
+                        <>
+                            <p className='fs-3 text-primary-emphasis mb-4'>Joke App</p>
+                            <JokeCard
+                                currentJoke={currentJoke}
+                                showPunchline={showPunchline}
+                                handleDisplayPunchline={handleDisplayPunchline}
+                                handleDisplayNextJoke={handleDisplayNextJoke}
+                                addLikedJoke={addLikedJoke}
+                            />
+                        </>
+                    )
+            }
+        </main >
     )
 }
 
-export default HomePage
+export default memo(HomePage)

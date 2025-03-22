@@ -15,6 +15,10 @@ function App() {
     //console.log(newJoke);
   }
 
+  const removeLikedJoke = (id) => {
+
+  }
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -26,7 +30,7 @@ function App() {
         },
         {
           path: "/favorite-jokes",
-          element: <FavJokesPage likedJokes={likedJokes} />
+          element: <FavJokesPage likedJokes={likedJokes} removeLikedJoke={removeLikedJoke} />
         },
         {
           path: "/about",

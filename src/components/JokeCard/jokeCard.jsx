@@ -1,4 +1,4 @@
-import React from 'react'
+import { memo } from "react"
 import { BsFillHandThumbsUpFill } from "react-icons/bs"
 
 function JokeCard({ currentJoke, showPunchline, handleDisplayPunchline, handleDisplayNextJoke, addLikedJoke }) {
@@ -57,4 +57,4 @@ function JokeCard({ currentJoke, showPunchline, handleDisplayPunchline, handleDi
     )
 }
 
-export default JokeCard
+export default memo(JokeCard)

@@ -11,6 +11,20 @@
   min-height: 75vh;
 }
 
+.custom-min-vh-75 {
+  min-height: 75vh;
+
+}
+
+.custom-img-container {
+  z-index: -10;
+  transform: rotate(8deg);
+}
+
+.custom-img {
+  opacity: 0.7;
+}
+
 a {
   text-decoration: none;
 }
