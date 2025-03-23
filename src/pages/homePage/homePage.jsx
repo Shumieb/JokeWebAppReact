@@ -47,10 +47,10 @@ function HomePage({ addLikedJoke }) {
     return (
         <main className='container text-center custom-vh-75'>
             {
-                Object.keys(currentJoke).length === 0 ? <LandingPage getRandomJoke={getRandomJoke} /> :
+                Object.keys(currentJoke).length === 0 ?
+                    <LandingPage getRandomJoke={getRandomJoke} /> :
                     (
                         <>
-                            <p className='fs-3 text-primary-emphasis mb-4'>Joke App</p>
                             <JokeCard
                                 currentJoke={currentJoke}
                                 showPunchline={showPunchline}
