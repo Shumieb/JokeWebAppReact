@@ -10,16 +10,16 @@ function JokeCard({ currentJoke, showPunchline, handleDisplayPunchline, handleDi
     }
 
     return (
-        <section className=' my-5 p-2 mx-auto'>
-            <div className="mb-2 p-2">
+        <section className='my-md-5 p-1 p-md-2 mx-auto custom-min-joke-card-w'>
+            <div className="mb-md-2 px-1 px-md-2 p-md-2 mx-auto">
                 <p className='fs-3 text-capitalize text-primary-emphasis px-2'>
                     {currentJoke.type.length > 0 ? currentJoke.type + " Joke" : "Loading Joke...."}
                 </p>
             </div>
-            <div className='row p-2 mx-auto'>
-                <div className="col-6 p-1 mx-auto" style={{ minHeight: "18rem" }}>
-                    <div className='text-start py-1 px-2 h-100 w-100'>
-                        <p className='fs-3 text-primary-emphasis opacity-75'>Set Up</p>
+            <div className='row p-md-2 mx-auto'>
+                <div className="col-sm-12 col-lg-6 px-1 mx-auto">
+                    <div className='text-start px-2 py-lg-4 mx-auto'>
+                        <p className='fs-3 text-primary-emphasis opacity-75 mt-lg-5'>Set Up</p>
                         <p className='fs-5 pb-2 text-primary-emphasis'>
                             {currentJoke.setup.length > 0 ? currentJoke.setup : "Loading Joke...."}
                         </p>
@@ -36,7 +36,7 @@ function JokeCard({ currentJoke, showPunchline, handleDisplayPunchline, handleDi
                         }
                     </div>
                 </div>
-                <div className="card col-6 p-2 mx-auto bg-primary text-white">
+                <div className="card col-sm-12 col-lg-6 p-2 mx-auto bg-primary text-white custom-min-punchline-h">
                     {
                         !showPunchline &&
                         (

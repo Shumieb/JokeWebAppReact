@@ -5,9 +5,9 @@ import Footer from '../Footer/footer'
 
 function Layout() {
     return (
-        <div className='mx-auto'>
+        <div className='mx-auto d-flex flex-column justify-content-between align-items-center min-vh-100'>
             <Header />
-            <div>
+            <div className='h-100'>
                 <Outlet />
             </div>
             <Footer />

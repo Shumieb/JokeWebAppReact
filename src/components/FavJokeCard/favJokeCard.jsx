@@ -17,7 +17,7 @@ function FavJokeCard({ joke }) {
                 onClick={() => removeLikedJoke(joke.id)}
                 className='btn btn-danger text-white fs-5 float-end d-flex justify-content-between align-items-center'>
                 <span className='d-block mx-1 pb-1'><BsTrashFill /></span>
-                <span className='d-block mx-1'>Remove From Favourites</span>
+                <span className='d-block mx-1'>Remove</span>
             </button>
         </div>
     )

@@ -15,9 +15,9 @@ function FavJokesPage() {
     }
 
     return (
-        <main className='container text-center custom-vh-75'>
+        <main className='container text-center custom-vh-75 custom-min-joke-card-w'>
             <p className='fs-3 text-primary-emphasis mb-4'>Favourite Jokes</p>
-            <section>
+            <section className='custom-min-joke-card-w'>
                 {
                     favJokes.map((joke) => {
                         return (

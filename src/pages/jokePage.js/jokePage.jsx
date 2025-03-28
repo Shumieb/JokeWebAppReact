@@ -80,7 +80,7 @@ function JokePage() {
 
 
     return (
-        <div className='container custom-min-vh-71 my-2'>
+        <div className='container custom-min-vh-71 my-md-2 vw-100'>
             <JokeCard
                 currentJoke={currentJoke}
                 showPunchline={showPunchline}

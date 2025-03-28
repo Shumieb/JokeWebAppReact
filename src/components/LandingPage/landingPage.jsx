@@ -3,8 +3,9 @@ import { Link } from "react-router";
 
 function LandingPage() {
     return (
-        <div className='row custom-min-vh-75 my-auto'>
-            <div className='col-6 d-flex flex-column justify-content-center align-items-center py-3'>
+        <div className='row my-auto'>
+            <div className="d-block d-md-none py-5 bg-inherit"></div>
+            <div className='col-lg-6 col-sm-12 d-flex flex-column justify-content-center align-items-center py-2'>
                 <div className="text-primary-emphasis mb-2 p-2 w-75 mx-auto d-flex justify-content-around">
                     <span className="fs-4 mx-2 d-block bounce-in"><BsEmojiSunglassesFill /></span>
                     <span className="fs-4 mx-2 d-block fade"><BsEmojiLaughingFill /></span>
@@ -23,7 +24,7 @@ function LandingPage() {
                     Get Joke
                 </Link>
             </div>
-            <div className='col-6 custom-img-container bg-primary p-0 rounded border border-primary border-opacity-25'>
+            <div className='d-none d-md-block col-md-12 col-lg-6 custom-img-container mt-md-5 bg-primary p-0 rounded border border-primary border-opacity-25'>
                 <img
                     src="https://images.pexels.com/photos/16838917/pexels-photo-16838917/free-photo-of-repeat-until-funny.jpeg"
                     alt=""
