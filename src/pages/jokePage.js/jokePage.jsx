@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import JokeCard from '../../components/JokeCard/jokeCard'
 
-function JokePage({ addLikedJoke }) {
+function JokePage() {
 
     const [showPunchline, setShowPunchline] = useState(false)
     const [currentJoke, setCurrentJoke] = useState(
@@ -86,7 +86,6 @@ function JokePage({ addLikedJoke }) {
                 showPunchline={showPunchline}
                 handleDisplayPunchline={handleDisplayPunchline}
                 handleDisplayNextJoke={handleDisplayNextJoke}
-                addLikedJoke={addLikedJoke}
             />
         </div>
     )

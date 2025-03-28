@@ -1,24 +1,20 @@
 import { BsFillHandThumbsUpFill, BsEmojiLaughingFill, BsEmojiSmileFill, BsEmojiSmileUpsideDownFill, BsEmojiSunglassesFill } from "react-icons/bs"
+import { useFavJokes } from '../../context/favJokeContext'
 
-function JokeCard({ currentJoke, showPunchline, handleDisplayPunchline, handleDisplayNextJoke, addLikedJoke }) {
+function JokeCard({ currentJoke, showPunchline, handleDisplayPunchline, handleDisplayNextJoke }) {
 
-    const handleLikedJoke = () => {
+    const { addLikedJoke } = useFavJokes();
+
+    const handleLikeJoke = () => {
         addLikedJoke(currentJoke);
     }
 
     return (
         <section className=' my-5 p-2 mx-auto'>
             <div className="mb-2 p-2">
-                {
-                    currentJoke.type.length > 0 ? (
-                        <p className='fs-3 text-capitalize text-primary-emphasis px-2'>
-                            {currentJoke.type} Joke
-                        </p>
-                    ) :
-                        (<p className='fs-3 text-capitalize text-primary-emphasis'>
-                            Loading Joke....
-                        </p>)
-                }
+                <p className='fs-3 text-capitalize text-primary-emphasis px-2'>
+                    {currentJoke.type.length > 0 ? currentJoke.type + " Joke" : "Loading Joke...."}
+                </p>
             </div>
             <div className='row p-2 mx-auto'>
                 <div className="col-6 p-1 mx-auto" style={{ minHeight: "18rem" }}>
@@ -73,7 +69,7 @@ function JokeCard({ currentJoke, showPunchline, handleDisplayPunchline, handleDi
                                 </button>
                                 <button
                                     className='btn btn-light text-primary-emphasis me-2 fs-5 d-flex justify-content-between align-items-center'
-                                    onClick={handleLikedJoke}
+                                    onClick={() => handleLikeJoke(currentJoke)}
                                 >
                                     <span className='d-block mx-1'>Like</span>
                                     <span className='d-block mx-1 pb-1'><BsFillHandThumbsUpFill /></span>

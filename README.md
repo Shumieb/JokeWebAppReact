@@ -4,10 +4,8 @@
 
 ## Key Feature
 
-### Uses the API: https://official-joke-api.appspot.com/random_joke  - Todo []
+### Uses the API: https://official-joke-api.appspot.com/random_joke 
 ### Users can save jokes they like - Todo []
-### Users can view jokes they like - Todo []
+### Users can view jokes they like 
 
-
-### Fixes to complete
 

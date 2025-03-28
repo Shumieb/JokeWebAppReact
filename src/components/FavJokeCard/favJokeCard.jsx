@@ -1,7 +1,11 @@
 import React from 'react'
-import { BsTrashFill } from "react-icons/bs";
+import { BsTrashFill } from "react-icons/bs"
+import { useFavJokes } from '../../context/favJokeContext'
 
-function FavJokeCard({ joke, removeLikedJoke }) {
+function FavJokeCard({ joke }) {
+
+    const { removeLikedJoke } = useFavJokes();
+
     return (
         <div className='card-body text-start'>
             <p className='fs-4 text-capitalize'>{joke.type} Joke</p>
