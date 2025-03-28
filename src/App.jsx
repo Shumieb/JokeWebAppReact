@@ -11,23 +11,23 @@ function App() {
 
   const router = createHashRouter([
     {
-      path: "",
+      path: "/",
       element: <Layout />,
       children: [
         {
-          path: "",
+          path: "/",
           element: <HomePage />
         },
         {
-          path: "joke",
+          path: "/joke",
           element: <JokePage />
         },
         {
-          path: "favorite-jokes",
+          path: "/favorite-jokes",
           element: <FavJokesPage />
         },
         {
-          path: "about",
+          path: "/about",
           element: <AboutPage />
         }
       ]
