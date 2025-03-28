@@ -17,7 +17,10 @@ a {
 
 .custom-min-vh-75 {
   min-height: 75vh;
+}
 
+.custom-min-vh-71 {
+  min-height: 71vh;
 }
 
 .custom-img-container {
@@ -50,7 +53,7 @@ a {
 }
 
 .bounce-in {
-  animation: bounceIn 2s infinite 2s;
+  animation: bounceIn 2s infinite 0.1s;
 }
 
 @keyframes rotate360 {
@@ -64,7 +67,7 @@ a {
 }
 
 .rotate {
-  animation: rotate360 3s infinite 2s;
+  animation: rotate360 3s infinite 0.1s;
 }
 
 @keyframes rotate0 {
@@ -78,7 +81,7 @@ a {
 }
 
 .rotate-two {
-  animation: rotate0 3s infinite 4s;
+  animation: rotate0 3s infinite 0.1s;
 }
 
 @keyframes fadeIn {
@@ -97,7 +100,7 @@ a {
 }
 
 .fade {
-  animation: fadeIn 4s infinite 2s;
+  animation: fadeIn 4s infinite 0.1s;
 }
 
 @keyframes bounceSide {
@@ -121,5 +124,5 @@ a {
 }
 
 .bounce-side {
-  animation: bounceSide 3s infinite 2s;
+  animation: bounceSide 3s infinite 0.1s;
 }

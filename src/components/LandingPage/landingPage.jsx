@@ -1,6 +1,7 @@
 import { BsEmojiSunglassesFill, BsEmojiLaughingFill, BsEmojiSmileUpsideDownFill, BsEmojiWinkFill } from "react-icons/bs";
+import { Link } from "react-router";
 
-function LandingPage({ getRandomJoke }) {
+function LandingPage() {
     return (
         <div className='row custom-min-vh-75 my-auto'>
             <div className='col-6 d-flex flex-column justify-content-center align-items-center py-3'>
@@ -15,12 +16,12 @@ function LandingPage({ getRandomJoke }) {
                     Eveniet alias at officiis dolores quas ipsum dolore voluptates assumenda?
                     Est, sit.
                 </p>
-                <button
-                    onClick={getRandomJoke}
+                <Link
+                    to="/joke"
                     className='btn btn-primary fs-5 px-4 py-2'
                 >
                     Get Joke
-                </button>
+                </Link>
             </div>
             <div className='col-6 custom-img-container bg-primary p-0 rounded border border-primary border-opacity-25'>
                 <img

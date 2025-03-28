@@ -8,6 +8,7 @@ function Header() {
                 <NavLink className="text-white fs-4 p-1" to="/">Joke App</NavLink>
                 <div className="p-1">
                     <NavLink className="text-white fs-5 mx-3 p-1" to="/">Home</NavLink>
+                    <NavLink className="text-white fs-5 mx-3 p-1" to="/joke">Jokes</NavLink>
                     <NavLink className="text-white fs-5 mx-3 p-1" to="/favorite-jokes">Favorite Jokes</NavLink>
                     <NavLink className="text-white fs-5 mx-3 p-1" to="/about">About</NavLink>
                 </div>
