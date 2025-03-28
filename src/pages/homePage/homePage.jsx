@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import LandingPage from '../../components/LandingPage/landingPage';
 import { useFavJokes } from '../../context/favJokeContext'
 

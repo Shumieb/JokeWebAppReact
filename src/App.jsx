@@ -1,4 +1,5 @@
 import './App.css'
+import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/Layout/layout'
 import AboutPage from './pages/aboutPage/aboutPage'

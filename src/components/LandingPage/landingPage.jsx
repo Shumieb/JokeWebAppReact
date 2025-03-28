@@ -1,5 +1,6 @@
 import { BsEmojiSunglassesFill, BsEmojiLaughingFill, BsEmojiSmileUpsideDownFill, BsEmojiWinkFill } from "react-icons/bs";
 import { Link } from "react-router";
+import React from "react";
 
 function LandingPage() {
     return (
