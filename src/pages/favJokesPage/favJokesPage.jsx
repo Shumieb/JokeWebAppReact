@@ -21,7 +21,7 @@ function FavJokesPage() {
                 {
                     favJokes.map((joke) => {
                         return (
-                            <div className='card mt-2 mb-4 py-3 bg-primary text-white' key={joke.id}>
+                            <div className='card mt-2 mb-4 py-3 bg-primary text-white w-100' key={joke.id}>
                                 <FavJokeCard joke={joke} />
                             </div>
                         )
